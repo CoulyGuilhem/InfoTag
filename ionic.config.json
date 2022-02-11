@@ -1,0 +1,7 @@
+{
+  "name": "InfoTag",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
