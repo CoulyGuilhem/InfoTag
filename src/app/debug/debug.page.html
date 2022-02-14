@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Debug</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>ecart</ion-label>
+    <ion-input [(ngModel)]="ecart" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>longitude</ion-label>
+    <ion-input [(ngModel)]="longitude" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>latitude</ion-label>
+    <ion-input [(ngModel)]="latitude" type="text"></ion-input>
+  </ion-item>
+  <section>
+    <ion-button (click)="testDesMethodes()" expand="block">valider le test</ion-button>
+  </section>
+
+</ion-content>
