@@ -1,19 +1,23 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
-import { CartePageRoutingModule } from './carte-routing.module';
-import { CartePage } from './carte.page';
-import {ExploreContainerComponentModule} from '../explore-container/explore-container.module';
+
+import { ComptePageRoutingModule } from './compte-routing.module';
+
+import { ComptePage } from './compte.page';
+import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CartePageRoutingModule,
     ExploreContainerComponentModule,
+    ComptePageRoutingModule
   ],
-  declarations: [CartePage]
+  declarations: [ComptePage]
 })
-export class CartePageModule {}
+export class ComptePageModule { }

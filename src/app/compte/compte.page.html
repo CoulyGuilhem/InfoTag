@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Compte
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list-header>Connexion</ion-list-header>
+  <ion-item>
+    <ion-label>email</ion-label>
+    <ion-input [(ngModel)]="email" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>mot de passe</ion-label>
+    <ion-input [(ngModel)]="password" type="password"></ion-input>
+  </ion-item>
+  <section>
+    <ion-button (click)="testDesMethodes()" expand="block">Connexion</ion-button>
+  </section>
+  <ion-list-header>Pas encore de compte ?</ion-list-header>
+  <section>
+    <ion-button (click)="testDesMethodes()" expand="block">Creer un compte</ion-button>
+  </section>
+
+
+</ion-content>

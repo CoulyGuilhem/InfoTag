@@ -71,7 +71,7 @@ export class CartePage implements OnInit {
       });
       newMarker.addTo(this.map);*/
     Leaflet.marker([this.latitude,this.longitude]).addTo(this.map);
-    Leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    Leaflet.tileLayer('https://data.mobilites-m.fr/carte-dark/{z}/{x}/{y}.png', {
       attribution: 'edupala.com © Angular LeafLet',
     }).addTo(this.map);
   }
