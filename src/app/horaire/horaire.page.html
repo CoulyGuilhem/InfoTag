@@ -10,11 +10,12 @@
   </div>
   <div>
     <p>{{debugInfo()}}</p>
+    <ion-button (click)="changeCirculation()"> Changer sens circulation </ion-button>
     <ion-datetime #myPicker (ionChange)="heureChange(myPicker.value)"></ion-datetime>
   </div>
   <div *ngFor="let arret of arretLigne">
     <span>{{arret.stopName}}</span>
-    <span style="display: block; float: right;">{{horaireCalculed()}}</span>
+    <span style="display: block; float: right;">{{horaireCalculed(arret)}}</span>
   </div>
 
 </ion-content>

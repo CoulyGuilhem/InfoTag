@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8afb3380-11d4-4201-bf5e-38a8d34d2cbf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Poppins-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Poppins-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Poppins-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Poppins-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Poppins-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lignes/lignes.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lignes/lignes.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lignes/lignes.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lignes/lignes.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/horaire/horaire.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/horaire/horaire.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/horaire/horaire.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/horaire/horaire.page.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1644935112331</updated>
-      <workItem from="1644935113830" duration="24986000" />
+      <workItem from="1644935113830" duration="28135000" />
     </task>
     <servers />
   </component>
