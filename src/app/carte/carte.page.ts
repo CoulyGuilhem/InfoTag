@@ -30,18 +30,28 @@ export class CartePage implements OnInit {
 
   constructor(private gps: Geolocation, private gpsService: GpsService) { }
 
-  ngOnInit() {
-      window.dispatchEvent(new Event('resize'));
-      this.gps.getCurrentPosition().then((resp) => {
-      this.latitude =  resp.coords.latitude;
-      this.longitude = resp.coords.longitude;
-      this.gpsService.setCoords(this.longitude,this.latitude);
-      this.leafletMap();
-      this.locationInterval = setInterval(() => this.getLocation(),1000)
+  ngOnInit() {}
+
+  ionViewDidEnter(){
+    console.log("enter");
+    window.dispatchEvent(new Event('resize'));
+    this.gps.getCurrentPosition().then((resp) => {
+    this.latitude =  resp.coords.latitude;
+    this.longitude = resp.coords.longitude;
+    this.gpsService.setCoords(this.longitude,this.latitude);
+    this.leafletMap();
     }).catch((error) => {
       console.log('Error getting location', error);
     });
+    this.locationInterval = setInterval(() => this.getLocation(),1000)
   }
+
+    ionViewDidLeave(){
+      console.log("leave")
+      clearInterval(this.locationInterval);
+      this.map = null;
+    }
+
 
   getLocation(){
       let watch = this.gps.watchPosition();
@@ -57,6 +67,7 @@ export class CartePage implements OnInit {
   }
 
   leafletMap() {
+    console.log("test")
     this.map = Leaflet.map('mapId').setView([this.latitude,this.longitude], 14);
         /**
       const icon = Leaflet.icon({
@@ -71,9 +82,11 @@ export class CartePage implements OnInit {
       });
       newMarker.addTo(this.map);*/
     Leaflet.marker([this.latitude,this.longitude]).addTo(this.map);
-    Leaflet.tileLayer('https://data.mobilites-m.fr/carte-dark/{z}/{x}/{y}.png', {
+    Leaflet.tileLayer('https://data.mobilites-m.fr/carte/{z}/{x}/{y}.png', {
       attribution: 'edupala.com © Angular LeafLet',
     }).addTo(this.map);
+      this.map.options.minZoom = 2;
+      this.map.options.maxZoom = 18;
   }
 
 }

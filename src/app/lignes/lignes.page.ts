@@ -3,6 +3,8 @@ import {ConnexionAPITAGService} from "../connexion-apitag.service";
 import {Observable} from "rxjs";
 import {LigneBus} from "../ligne-bus";
 import {LigneTram} from "../ligne-tram";
+import {LigneService} from "../ligne.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-lignes',
@@ -27,9 +29,10 @@ export class LignesPage implements OnInit {
   private listeLigneRegexpress: Array<LigneBus> = [];
   private listeLigneMco: Array<LigneBus> = [];
 
-  constructor(private apiConnexion: ConnexionAPITAGService) { }
+  constructor(private apiConnexion: ConnexionAPITAGService, private ligneService: LigneService,private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  ionViewDidEnter(){
     this.apiConnexion.getListeLigneTransports().subscribe(data => {
       for(let i = 0; i < data.length; i++){
         switch(data[i]['mode']){
@@ -42,6 +45,7 @@ export class LignesPage implements OnInit {
               type: data[i]['type'],
               colortext:data[i]['textColor']
             }
+            console.log(ligne.id);
             this.listeLigneTram.push(ligne);
             break;
 
@@ -54,7 +58,7 @@ export class LignesPage implements OnInit {
               type: data[i]['type'],
               colortext:data[i]['textColor']
             }
-            console.log(ligne.shortname);
+            console.log(ligne.id);
             this.listeLigneTypeBus.push(data[i]['type'])
             this.busType(ligne);
           }
@@ -62,9 +66,6 @@ export class LignesPage implements OnInit {
             break;
         }
       }
-      console.log("Zebi"+this.listeLigneTypeBus.toString());
-      console.log(this.listeLigneNavette.toString());
-      console.log(this.listeLigneTram.toString());
     });
   }
   busType(ligne: LigneBus){
@@ -121,11 +122,9 @@ export class LignesPage implements OnInit {
   }
 
   ligneGetNameTram(ligne: LigneTram): string{
-    console.log(ligne.shortname)
     return ligne.shortname;
   }
   ligneGetNameBus(ligne: LigneBus): string{
-    console.log(ligne.shortname)
     return ligne.shortname;
   }
 
@@ -136,6 +135,11 @@ export class LignesPage implements OnInit {
 
   styleTram(ligne: LigneTram){
     return "--background:"+ligne.color+"; color:#"+ligne.colortext;
+  }
+
+  goToligneInfo(ligne){
+    this.ligneService.setLigne(ligne);
+    this.router.navigate(['/ligne-info']);
   }
 
 }

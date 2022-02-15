@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ligneInfo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-button (click)="returnListeLigne()"> Retour </ion-button>
+    <ion-button (click)="goToHorraire()"> Horaires </ion-button>
+  </div>
+  <div>
+    <p>{{debugInfo()}}</p>
+    <ion-input type="text" value="" placeholder="Rechercher un arret" [(ngModel)]="searchBar"></ion-input>
+  </div>
+  <div *ngFor="let arret of arretLigne">
+    <p *ngIf="arret['stopName'].includes(searchBar)">{{arret.stopName}}</p>
+  </div>
+</ion-content>

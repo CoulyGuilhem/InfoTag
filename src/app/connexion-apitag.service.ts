@@ -83,6 +83,26 @@ export class ConnexionAPITAGService {
         return this.http.get(URL);
     }
   }
+
+  // Liste des arrets en fonction d'une ligne. Permet aussi de renvoyer l'heure de passage des 3 ou 4 prochains bus
+  // timeStamp = null -> heure actuelle
+  //Passage transport ( tableau lettre/numero ligne pour la TAG, car+idLigne pour TransIsÃ¨re, ou SNCF+identifiant pour la SNCF)
+  public listeArretEnFonctionligneAvecHeureAffichage(transport, timeStamp) {
+    if(timeStamp == null){
+      const URL = this.URL + "ficheHoraires/json?route=" + transport.id;
+      return this.http.get(URL);
+    } else {
+      const URL = this.URL + "ficheHoraires/json?route=" + transport.id + "&time=" + timeStamp;
+      return this.http.get(URL);
+    }
+  }
+
+  //recherche de point d'arret
+  //renvoit un tableau contenant l'id de l'arret
+  public rechercheDePointArret(nomArret) {
+    const URL = this.URL + "findType/json?types=arret&query=" + nomArret;
+    return this.http.get(URL);
+  }
 }
 
 
