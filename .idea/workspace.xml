@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8afb3380-11d4-4201-bf5e-38a8d34d2cbf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/metromobilite.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Poppins-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Poppins-ExtraBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Poppins-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Poppins-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Poppins-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/carte/carte.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/carte/carte.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/connexion-apitag.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/connexion-apitag.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/lignes/lignes.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lignes/lignes.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lignes/lignes.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lignes/lignes.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lignes/lignes.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lignes/lignes.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,11 +75,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1644935112331</updated>
-      <workItem from="1644935113830" duration="24528000" />
+      <workItem from="1644935113830" duration="24986000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
