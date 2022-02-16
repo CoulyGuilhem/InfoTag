@@ -21,6 +21,11 @@ export class ConnexionAPITAGService {
     return this.http.get(URL);
   }
 
+  public getListeLigneTrace(): Observable<any> {
+    const URL = this.URL + "lines/json?types=ligne&reseaux=SEM"; //http://data.mobilites-m.fr/api/lines/json?types=ligne&codes=SEM
+    return this.http.get(URL);
+  }
+
   public getLigneAproximite(ecart: number, longitude: number, latitude: number) {
     const URL = this.URL + "linesNear/json?x=" + longitude + "&y=" + latitude + "&dist=" + ecart + "&details=" + this.detail;
     return this.http.get(URL);

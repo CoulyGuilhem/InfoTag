@@ -93,13 +93,4 @@
     </div>
   </div>
 
-  <div class="sectionLigne">
-    <p>M'Convoit-Lignes /!\ horraires non gérée par l'api</p>
-    <div>
-      <ion-button *ngFor="let ligneBus of listeLigneMco" (click)="goToligneInfo(ligneBus)" style={{styleBus(ligneBus)}}>
-        {{ligneGetNameBus(ligneBus)}}
-      </ion-button>
-    </div>
-  </div>
-
 </ion-content>

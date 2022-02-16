@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
   declarations: [AppComponent],
   entryComponents: [],
   imports: [HttpClientModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [Geolocation,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{provide: LOCALE_ID, useValue: 'en' },Geolocation,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

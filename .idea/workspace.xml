@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8afb3380-11d4-4201-bf5e-38a8d34d2cbf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pointerVert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pointerViolet.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/carte/carte.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/carte/carte.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/carte/carte.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/carte/carte.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/connexion-apitag.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/connexion-apitag.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/horaire/horaire.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/horaire/horaire.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lignes/lignes.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lignes/lignes.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/lignes/lignes.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lignes/lignes.page.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +41,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\Guilhem\Desktop\metromobilite\InfoTag\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Guilhem\Desktop\metromobilite\InfoTag\src\assets\img" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Tests (app)" type="JavaScriptTestRunnerKarma">

@@ -5,6 +5,7 @@ import {LigneBus} from "../ligne-bus";
 import {LigneTram} from "../ligne-tram";
 import {LigneService} from "../ligne.service";
 import {Router} from "@angular/router";
+import {proxyInputs} from "@ionic/angular/directives/angular-component-lib/utils";
 
 @Component({
   selector: 'app-lignes',
@@ -26,7 +27,6 @@ export class LignesPage implements OnInit {
 
   private listeLigneReg: Array<LigneBus> = [];
   private listeLigneRegexpress: Array<LigneBus> = [];
-  private listeLigneMco: Array<LigneBus> = [];
 
   constructor(private apiConnexion: ConnexionAPITAGService, private ligneService: LigneService,private router: Router) { }
 
@@ -34,6 +34,15 @@ export class LignesPage implements OnInit {
   ionViewDidEnter(){
     this.listeLigneTram = [];
     this.listeLigneTypeBus = [];
+
+    this.listeLigneNavette = [];
+    this.listeLigneChrono = [];
+    this.listeLigneProximo = [];
+    this.listeLigneFlexo = [];
+    this.listeLigneTougo = [];
+    this.listeLigneVoiron = [];
+    this.listeLigneReg = [];
+    this.listeLigneRegexpress = [];
 
     this.apiConnexion.getListeLigneTransports().subscribe(data => {
       for(let i = 0; i < data.length; i++){
@@ -113,10 +122,6 @@ export class LignesPage implements OnInit {
         this.listeLigneRegexpress.push(ligne);
         break;
       }
-      case("MCO"):{
-        this.listeLigneMco.push(ligne);
-        break;
-      }
     }
   }
 
@@ -140,7 +145,4 @@ export class LignesPage implements OnInit {
     this.ligneService.setLigne(ligne);
     this.router.navigate(['/ligne-info']);
   }
-
-
-
 }

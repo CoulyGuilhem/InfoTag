@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, LOCALE_ID, OnInit} from '@angular/core';
 import {Arret} from "../arret";
 import {ConnexionAPITAGService} from "../connexion-apitag.service";
 import {LigneService} from "../ligne.service";
 import {Router} from "@angular/router";
 import {formatDate} from '@angular/common';
+
 
 @Component({
   selector: 'app-horaire',
@@ -36,9 +37,9 @@ export class HorairePage implements OnInit {
 
   loadArret(time: number){
     this.ligne = this.ligneService.getLigne()
-    console.log(this.ligne)
+    console.log(new Date(time))
     if (this.ligne != null) {
-      this.apiConnexion.listeArretEnFonctionligneAvecHeureAffichage(this.ligne, time).subscribe(dataProximite => {
+      this.apiConnexion.listeArretEnFonctionligneAvecHeureAffichage(this.ligne, time+3600000).subscribe(dataProximite => {
         console.log(dataProximite)
         this.arret = dataProximite[this.sensCirculation]['arrets'];
         console.log(this.arret)
@@ -70,7 +71,6 @@ export class HorairePage implements OnInit {
 
   heureChange(value){
     this.horaireChoisie = new Date(value).getTime()
-    console.log("WOLA COMMENT C EST POSSIBLE : "+this.horaireChoisie)
     this.loadArret(this.horaireChoisie);
   }
 
@@ -79,16 +79,11 @@ export class HorairePage implements OnInit {
       let horaires: string = "";
       let date = new Date();
       date.setHours(0,0,0,0);
-      
+
       for(let i = 0;i < (arret.trips).length; i ++){
-        console.log(i)
         let passage = new Date(date.getTime()+arret.trips[i]*1000)
         if(passage instanceof Date && !isNaN(passage.getTime())){
-          /**
-          console.log(new Date(date.getTime()+this.arret[j].trips[i]*1000))
-          console.log("WOLA TU DIS PAS NaN : "+date.getTime()+this.arret[j].trips[i]*1000+" date.getTime() = "+date.getTime()+"this.arret[j].trips[i] = "+this.arret[j].trips[i])
-        */
-          horaires = horaires + " | " + formatDate(passage,'HH:mm','en-US')
+          horaires = horaires + " | " + formatDate(passage,'HH:mm','en')
         } else {
           horaires = horaires + " | " + 'Non deservi';
         }

@@ -2,10 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Geolocation } from '@awesome-cordova-plugins/geolocation/ngx';
 import {GpsService} from "../gps.service";
 import * as Leaflet from 'leaflet';
-import {interval} from "rxjs";
 import {ConnexionAPITAGService} from "../connexion-apitag.service";
-
-
 @Component({
   selector: 'app-carte',
   templateUrl: './carte.page.html',
@@ -58,7 +55,7 @@ export class CartePage implements OnInit {
   }
 
   ionViewDidEnter(){
-    console.log("en");
+
 
     window.dispatchEvent(new Event('resize'));
     this.gps.getCurrentPosition().then((resp) => {
@@ -69,6 +66,7 @@ export class CartePage implements OnInit {
     }).catch((error) => {
       console.log('Error getting location', error);
     });
+
     // Get all point
     this.apiConnexion.getDescriptionTypes('2').subscribe(pointArret => {
       this.listeNameArret = [];
@@ -97,7 +95,6 @@ export class CartePage implements OnInit {
             pointAgence['features'][i]['properties']['HORAIRES_JEUDI'] + " Vendredi :"+
             pointAgence['features'][i]['properties']['HORAIRES_VENDREDI']
         )
-        console.log("SARTEK")
         this.setPoint(this.listePoint[i],this.listeNameArret[i],this.iconViolet);
       }
     });
@@ -128,27 +125,36 @@ export class CartePage implements OnInit {
   leafletMap() {
     console.log("test")
     this.map = Leaflet.map('mapId').setView([this.latitude,this.longitude], 14);
-        /**
-      const icon = Leaflet.icon({
-        iconUrl: 'pointerVert.png',
-          className: "my-custom-pin",
-          iconAnchor: [0, 24],
-          labelAnchor: [-6, 0],
-          popupAnchor: [0, -36],
-          html: `<span style=`+this.markerHtmlStyles+` />`
-      })/**
-      let newMarker = Leaflet.marker([this.latitude, this.longitude], {
-          icon: icon
-      });
-      newMarker.addTo(this.map);*/
     Leaflet.marker([this.latitude,this.longitude]).addTo(this.map);
-    Leaflet.tileLayer('https://data.mobilites-m.fr/carte/{z}/{x}/{y}.png', {
+    Leaflet.tileLayer('https://data.mobilites-m.fr/carte-dark/{z}/{x}/{y}.png', {
       attribution: 'edupala.com © Angular LeafLet',
     }).addTo(this.map);
       this.map.options.minZoom = 2;
       this.map.options.maxZoom = 18;
+    this.apiConnexion.getListeLigneTrace().subscribe(trace => {
+      console.log(trace)
+      for(let j = 0; j < trace['features'].length;j++){
+        let coordRanges = []
+        console.log(j)
+        if(!trace['features'][j]['geometry'][0] !== undefined){ // Ne fonctionne pas pour x raisons
+          for(let i = 0 ; i < trace['features'][j]['geometry']['coordinates'][0].length; i++){
+
+            coordRanges.push([trace['features'][j]['geometry']['coordinates'][0][i][1],trace['features'][j]['geometry']['coordinates'][0][i][0]])
+          }
+          Leaflet.polyline(coordRanges, {color: this.parseColor(trace['features'][j]['properties']['COULEUR'])}).addTo(this.map);
+        }
+      }
+    })
   }
-
-
+  parseColor(colorString){
+    let colorInt =[]
+    let colorSplit = colorString.split(",")
+    let color ='#'
+    for(let i = 0; i < colorSplit.length; i++){
+      colorInt.push(Number(colorSplit[i]))
+      color = color + colorInt[i].toString(16);
+    }
+    return color
+  }
 
 }
