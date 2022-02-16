@@ -13,7 +13,6 @@ import {Router} from "@angular/router";
 })
 export class LignesPage implements OnInit {
 
-  private listeLigneData: Observable<any>;
   private listeLigneTram: Array<LigneTram> = [];
   private listeLigneTypeBus: Array<String> = [];
 
@@ -33,6 +32,9 @@ export class LignesPage implements OnInit {
 
   ngOnInit(): void {}
   ionViewDidEnter(){
+    this.listeLigneTram = [];
+    this.listeLigneTypeBus = [];
+
     this.apiConnexion.getListeLigneTransports().subscribe(data => {
       for(let i = 0; i < data.length; i++){
         switch(data[i]['mode']){
@@ -68,6 +70,7 @@ export class LignesPage implements OnInit {
       }
     });
   }
+
   busType(ligne: LigneBus){
     switch (ligne.type){
       case("NAVETTE"):{
@@ -114,10 +117,6 @@ export class LignesPage implements OnInit {
         this.listeLigneMco.push(ligne);
         break;
       }
-
-
-
-
     }
   }
 
@@ -141,5 +140,7 @@ export class LignesPage implements OnInit {
     this.ligneService.setLigne(ligne);
     this.router.navigate(['/ligne-info']);
   }
+
+
 
 }

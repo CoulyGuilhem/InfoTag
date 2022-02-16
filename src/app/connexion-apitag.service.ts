@@ -31,57 +31,59 @@ export class ConnexionAPITAGService {
     return this.http.get(URL);
   }
 
-  public getDescriptionTypes(type) {
+  public getDescriptionTypes(type: string) {
     let POI;
+    console.log("test")
     switch (type) {
-      case 1:
+      case '1':
         POI = "agenceM";
         break;
-      case 2:
+      case '2':
+        console.log('2')
         POI = "arret";
         break;
-      case 3:
+      case '3':
         POI = "citelib";
         break;
-      case 4:
+      case '4':
         POI = "dat";
         break;
-      case 5:
+      case '5':
         POI = "depositaire";
         break;
-      case 6:
+      case '6':
         POI = "hamo";
         break;
-      case 7:
+      case '7':
         POI = "lieux";
         break;
-      case 8:
+      case '8':
         POI = "MVA";
         break;
-      case 9:
+      case '9':
         POI = "MVC";
         break;
-      case 10:
+      case '10':
         POI = "PAR";
         break;
-      case 11:
+      case '11':
         POI = "PKG";
         break;
-      case 12:
+      case '12':
         POI = "PMV";
         break;
-      case 13:
+      case '13':
         POI = "pointArret";
         break;
-      case 14:
+      case '14':
         POI = "pointService";
         break;
       default:
         POI = "agenceM";
-
-        const URL = this.URL + "bbox/json?types=" + POI;
-        return this.http.get(URL);
+        break;
     }
+    const URL = this.URL + "bbox/json?types=" + POI;
+    return this.http.get(URL);
   }
 
   // Liste des arrets en fonction d'une ligne. Permet aussi de renvoyer l'heure de passage des 3 ou 4 prochains bus

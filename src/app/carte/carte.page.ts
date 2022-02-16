@@ -3,6 +3,7 @@ import { Geolocation } from '@awesome-cordova-plugins/geolocation/ngx';
 import {GpsService} from "../gps.service";
 import * as Leaflet from 'leaflet';
 import {interval} from "rxjs";
+import {ConnexionAPITAGService} from "../connexion-apitag.service";
 
 
 @Component({
@@ -12,10 +13,30 @@ import {interval} from "rxjs";
 })
 export class CartePage implements OnInit {
 
+  private iconVerte = Leaflet.icon({
+    iconUrl: '../../assets/img/pointerVert.png',
+    className: "vert",
+    iconSize:[32,48],
+    iconAnchor: [0, 24],
+    labelAnchor: [-6, 0],
+    popupAnchor: [0, -36],
+  })
+
+  private iconViolet = Leaflet.icon({
+    iconUrl: '../../assets/img/pointerViolet.png',
+    className: "violet",
+    iconSize:[32,48],
+    iconAnchor: [0, 24],
+    labelAnchor: [-6, 0],
+    popupAnchor: [0, -36],
+  })
+
   private longitude;
   private latitude;
   private map: Leaflet.Map;
   private locationInterval;
+  private listePoint: Array<Array<number>> = []
+  private listeNameArret: Array<string> = []
   private markerHtmlStyles = `
   background-color: '#583470';
   width: 3rem;
@@ -28,12 +49,17 @@ export class CartePage implements OnInit {
   transform: rotate(45deg);
   border: 1px solid #FFFFFF`
 
-  constructor(private gps: Geolocation, private gpsService: GpsService) { }
+  constructor(private gps: Geolocation, private gpsService: GpsService, private apiConnexion: ConnexionAPITAGService) { }
 
   ngOnInit() {}
 
+  setPoint(coords,name,icon){
+    Leaflet.marker([coords[1],coords[0]], {icon: icon}).addTo(this.map).bindPopup(name);
+  }
+
   ionViewDidEnter(){
-    console.log("enter");
+    console.log("en");
+
     window.dispatchEvent(new Event('resize'));
     this.gps.getCurrentPosition().then((resp) => {
     this.latitude =  resp.coords.latitude;
@@ -43,6 +69,39 @@ export class CartePage implements OnInit {
     }).catch((error) => {
       console.log('Error getting location', error);
     });
+    // Get all point
+    this.apiConnexion.getDescriptionTypes('2').subscribe(pointArret => {
+      this.listeNameArret = [];
+      this.listePoint = [];
+      for(let i = 0; i < pointArret['features'].length ; i++) {
+        if (pointArret['features'][i]['properties']['id'].includes("SEM:")
+        ) {
+          this.listePoint.push(pointArret['features'][i]['geometry']['coordinates'])
+          this.listeNameArret.push(pointArret['features'][i]['properties']['LIBELLE'])
+        } else {
+          return null;
+        }
+        this.setPoint(this.listePoint[i],this.listeNameArret[i],this.iconVerte);
+      }
+    });
+    this.apiConnexion.getDescriptionTypes('1').subscribe(pointAgence => {
+      console.log(pointAgence)
+      for(let i = 0; i <pointAgence['features'].length ; i++) {
+        this.listePoint.push(pointAgence['features'][i]['geometry']['coordinates'])
+        this.listeNameArret.push(pointAgence['features'][i]['properties']['NOM']+" : Telephone :"+
+            pointAgence['features'][i]['properties']['TELEPHONE'] + " : Adresse :"+
+            pointAgence['features'][i]['properties']['RUE']+" Lundi :" +
+            pointAgence['features'][i]['properties']['HORAIRES_LUNDI'] + " Mardi :"+
+            pointAgence['features'][i]['properties']['HORAIRES_MARDI'] + " Mercredi :"+
+            pointAgence['features'][i]['properties']['HORAIRES_MERCREDI'] + " Jeudi :"+
+            pointAgence['features'][i]['properties']['HORAIRES_JEUDI'] + " Vendredi :"+
+            pointAgence['features'][i]['properties']['HORAIRES_VENDREDI']
+        )
+        console.log("SARTEK")
+        this.setPoint(this.listePoint[i],this.listeNameArret[i],this.iconViolet);
+      }
+    });
+
     this.locationInterval = setInterval(() => this.getLocation(),1000)
   }
 
@@ -71,6 +130,7 @@ export class CartePage implements OnInit {
     this.map = Leaflet.map('mapId').setView([this.latitude,this.longitude], 14);
         /**
       const icon = Leaflet.icon({
+        iconUrl: 'pointerVert.png',
           className: "my-custom-pin",
           iconAnchor: [0, 24],
           labelAnchor: [-6, 0],
@@ -88,5 +148,7 @@ export class CartePage implements OnInit {
       this.map.options.minZoom = 2;
       this.map.options.maxZoom = 18;
   }
+
+
 
 }

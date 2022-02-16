@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8afb3380-11d4-4201-bf5e-38a8d34d2cbf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/horaire/horaire.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/horaire/horaire.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/horaire/horaire.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/horaire/horaire.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/carte/carte.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/carte/carte.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/connexion-apitag.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/connexion-apitag.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lignes/lignes.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lignes/lignes.page.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,12 +23,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../pc portable/save/gitMergig/InfoTag" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\Guilhem\Desktop\metromobilite\InfoTag\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -69,6 +75,8 @@
       <option name="presentableId" value="Default" />
       <updated>1644935112331</updated>
       <workItem from="1644935113830" duration="28135000" />
+      <workItem from="1644998434361" duration="14861000" />
+      <workItem from="1645019246783" duration="1974000" />
     </task>
     <servers />
   </component>
@@ -85,5 +93,9 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
