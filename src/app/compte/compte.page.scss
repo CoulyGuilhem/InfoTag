@@ -1,0 +1,44 @@
+.blocConnexion {
+  margin: 20px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  border: 2px solid #642180;
+
+  ion-button {
+    text-transform: capitalize;
+  }
+
+  .txtConnexion {
+    margin-left: 10px;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  .champConnexion {
+    --background: #121212 !important;
+    margin-bottom: 5px;
+    width: 90%;
+    margin: 0 auto 10px;
+
+    ion-label {
+      opacity: 50%;
+    }
+  }
+
+  .btnConnexion {
+    max-width: 160px;
+    width: 100%;
+    margin: 30px auto 40px;
+  }
+
+  .txtInscription {
+    text-align: center;
+  }
+
+  .btnInscription {
+    max-width: 190px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

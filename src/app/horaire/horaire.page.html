@@ -1,21 +1,33 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>horaire</ion-title>
+  <ion-toolbar class="menuHaut">
+    <div class="content">
+      <img src="/assets/img/logo.png" alt="">
+      <ion-title>Lignes du réseau TAG</ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div>
-    <ion-button (click)="returnToLigneInfo()"> Retour </ion-button>
+
+  <div class="btnRetour">
+    <ion-button color="tertiary" (click)="returnToLigneInfo()"> Retour </ion-button>
   </div>
-  <div>
-    <p>{{debugInfo()}}</p>
-    <ion-button (click)="changeCirculation()"> Changer sens circulation </ion-button>
-    <ion-datetime #myPicker (ionChange)="heureChange(myPicker.value)"></ion-datetime>
+
+  <div class="infoHoraire">
+
+    <div class="infoHaut">
+      <p>{{debugInfo()}}</p>
+      <ion-button color="tertiary" (click)="changeCirculation()"> Changer sens circulation </ion-button>
+      <ion-datetime color="tertiary" #myPicker (ionChange)="heureChange(myPicker.value)"></ion-datetime>
+    </div>
+
   </div>
-  <div *ngFor="let arret of arretLigne">
-    <span>{{arret.stopName}}</span>
-    <span style="display: block; float: right;">{{horaireCalculed(arret)}}</span>
+
+  <div class="tableauArret">
+    <div class="entreeArret" *ngFor="let arret of arretLigne">
+      <span class="nomArret">{{arret.stopName}}</span>
+      <span class="heureArret">{{horaireCalculed(arret)}}</span>
+    </div>
   </div>
 
 </ion-content>

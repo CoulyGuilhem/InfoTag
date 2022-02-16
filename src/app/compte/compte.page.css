@@ -1,0 +1,45 @@
+.blocConnexion {
+  margin: 20px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  border: 2px solid #642180;
+}
+
+.blocConnexion ion-button {
+  text-transform: capitalize;
+}
+
+.blocConnexion .txtConnexion {
+  margin-left: 10px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.blocConnexion .champConnexion {
+  --background: #121212 !important;
+  margin-bottom: 5px;
+  width: 90%;
+  margin: 0 auto 10px;
+}
+
+.blocConnexion .champConnexion ion-label {
+  opacity: 50%;
+}
+
+.blocConnexion .btnConnexion {
+  max-width: 160px;
+  width: 100%;
+  margin: 30px auto 40px;
+}
+
+.blocConnexion .txtInscription {
+  text-align: center;
+}
+
+.blocConnexion .btnInscription {
+  max-width: 190px;
+  width: 100%;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=compte.page.css.map */

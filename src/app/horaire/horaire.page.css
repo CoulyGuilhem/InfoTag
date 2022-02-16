@@ -1,0 +1,64 @@
+.btnRetour {
+  margin: 5px 20px 0;
+}
+
+.btnRetour ion-button {
+  text-transform: capitalize;
+}
+
+.infoHoraire {
+  padding: 10px 20px;
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.infoHoraire .infoHaut {
+  text-align: center;
+}
+
+.infoHoraire .infoHaut p {
+  margin: 10px 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.infoHoraire .infoHaut ion-button {
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
+.infoHoraire .infoHaut ion-datetime {
+  margin: 0 auto;
+}
+
+.tableauArret {
+  margin-top: 30px;
+  font-size: 0.8rem;
+}
+
+.tableauArret .entreeArret {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px;
+  border-bottom: 1px solid #e84418;
+}
+
+.tableauArret .entreeArret:last-child {
+  border-bottom: none;
+}
+
+.tableauArret .entreeArret .nomArret {
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=horaire.page.css.map */

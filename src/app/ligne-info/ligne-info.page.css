@@ -1,0 +1,52 @@
+.btnRetour {
+  margin: 5px 20px 0;
+}
+
+.btnRetour ion-button {
+  text-transform: capitalize;
+}
+
+.infoLigne {
+  margin: 20px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  border: 2px solid #e84418;
+}
+
+.infoLigne .infoHaut p {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.infoLigne .infoHaut ion-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.infoLigne .infoHaut ion-input {
+  --background: #121212 !important;
+  margin-bottom: 5px;
+  margin: 0 auto 10px;
+}
+
+.infoLigne .tableauArret {
+  margin-top: 30px;
+}
+
+.infoLigne .tableauArret .entreeArret {
+  border-bottom: 1px solid #e84418;
+}
+
+.infoLigne .tableauArret .entreeArret:last-child {
+  border-bottom: none;
+}
+/*# sourceMappingURL=ligne-info.page.css.map */

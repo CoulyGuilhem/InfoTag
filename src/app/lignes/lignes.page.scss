@@ -1,23 +1,5 @@
-.toolbar-content {
-  display: flex;
-  align-items: center;
-}
-
-.menuHaut {
-  img {
-    max-width: 30px;
-    max-height: 30px;
-    width: 100%;
-    height: 100%;
-  }
-  .titreLignes {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-}
-
 .sectionLigne {
-  margin: 40px;
+  margin: 20px;
   padding-bottom: 10px;
   border-radius: 8px;
   background-color: #1f1f1f;

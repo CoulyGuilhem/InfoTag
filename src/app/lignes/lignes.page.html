@@ -1,7 +1,9 @@
 <ion-header>
   <ion-toolbar class="menuHaut">
-    <img src="../../assets/img/logo.png" alt="">
-    <ion-title class="titreLignes">Lignes du réseau TAG</ion-title>
+    <div class="content">
+      <img src="/assets/img/logo.png" alt="">
+      <ion-title>Lignes du réseau TAG</ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
@@ -10,7 +12,8 @@
   <div class="sectionLigne">
     <p>Tram</p>
     <div>
-      <ion-button *ngFor="let ligneTram of listeLigneTram" (click)="goToligneInfo(ligneTram)" style={{styleTram(ligneTram)}}>
+      <ion-button *ngFor="let ligneTram of listeLigneTram" (click)="goToligneInfo(ligneTram)"
+        style={{styleTram(ligneTram)}}>
         {{ligneGetNameTram(ligneTram)}}
       </ion-button>
     </div>
@@ -19,7 +22,8 @@
   <div class="sectionLigne">
     <p>Navette</p>
     <div>
-      <ion-button *ngFor="let ligneBus of listeLigneNavette" (click)="goToligneInfo(ligneBus)" style={{styleBus(ligneBus)}}>
+      <ion-button *ngFor="let ligneBus of listeLigneNavette" (click)="goToligneInfo(ligneBus)"
+        style={{styleBus(ligneBus)}}>
         {{ligneGetNameBus(ligneBus)}}
       </ion-button>
     </div>
@@ -28,7 +32,8 @@
   <div class="sectionLigne">
     <p>Chrono</p>
     <div>
-      <ion-button *ngFor="let ligneBus of listeLigneChrono" (click)="goToligneInfo(ligneBus)" style={{styleBus(ligneBus)}}>{{ligneGetNameBus(ligneBus)}}
+      <ion-button *ngFor="let ligneBus of listeLigneChrono" (click)="goToligneInfo(ligneBus)"
+        style={{styleBus(ligneBus)}}>{{ligneGetNameBus(ligneBus)}}
       </ion-button>
     </div>
   </div>
@@ -36,7 +41,8 @@
   <div class="sectionLigne">
     <p>Proximo</p>
     <div>
-      <ion-button *ngFor="let ligneBus of listeLigneProximo" (click)="goToligneInfo(ligneBus)" style={{styleBus(ligneBus)}}>{{ligneGetNameBus(ligneBus)}}
+      <ion-button *ngFor="let ligneBus of listeLigneProximo" (click)="goToligneInfo(ligneBus)"
+        style={{styleBus(ligneBus)}}>{{ligneGetNameBus(ligneBus)}}
       </ion-button>
     </div>
   </div>
@@ -44,7 +50,8 @@
   <div class="sectionLigne">
     <p>Flexo</p>
     <div>
-      <ion-button *ngFor="let ligneBus of listeLigneFlexo" (click)="goToligneInfo(ligneBus)" style={{styleBus(ligneBus)}}>{{ligneGetNameBus(ligneBus)}}
+      <ion-button *ngFor="let ligneBus of listeLigneFlexo" (click)="goToligneInfo(ligneBus)"
+        style={{styleBus(ligneBus)}}>{{ligneGetNameBus(ligneBus)}}
       </ion-button>
     </div>
   </div>
@@ -52,7 +59,8 @@
   <div class="sectionLigne">
     <p>TouGo</p>
     <div>
-      <ion-button *ngFor="let ligneBus of listeLigneTougo" (click)="goToligneInfo(ligneBus)" style={{styleBus(ligneBus)}}>{{ligneGetNameBus(ligneBus)}}
+      <ion-button *ngFor="let ligneBus of listeLigneTougo" (click)="goToligneInfo(ligneBus)"
+        style={{styleBus(ligneBus)}}>{{ligneGetNameBus(ligneBus)}}
       </ion-button>
     </div>
   </div>
@@ -60,7 +68,8 @@
   <div class="sectionLigne">
     <p>Pays Voironnais</p>
     <div>
-      <ion-button *ngFor="let ligneBus of listeLigneVoiron" (click)="goToligneInfo(ligneBus)" style={{styleBus(ligneBus)}}>{{ligneGetNameBus(ligneBus)}}
+      <ion-button *ngFor="let ligneBus of listeLigneVoiron" (click)="goToligneInfo(ligneBus)"
+        style={{styleBus(ligneBus)}}>{{ligneGetNameBus(ligneBus)}}
       </ion-button>
     </div>
   </div>
@@ -68,7 +77,8 @@
   <div class="sectionLigne">
     <p>Region Express</p>
     <div>
-      <ion-button *ngFor="let ligneBus of listeLigneRegexpress" (click)="goToligneInfo(ligneBus)" style={{styleBus(ligneBus)}}>
+      <ion-button *ngFor="let ligneBus of listeLigneRegexpress" (click)="goToligneInfo(ligneBus)"
+        style={{styleBus(ligneBus)}}>
         {{ligneGetNameBus(ligneBus)}}
       </ion-button>
     </div>
@@ -77,7 +87,8 @@
   <div class="sectionLigne">
     <p>Region</p>
     <div>
-      <ion-button *ngFor="let ligneBus of listeLigneReg" (click)="goToligneInfo(ligneBus)" style={{styleBus(ligneBus)}}>{{ligneGetNameBus(ligneBus)}}
+      <ion-button *ngFor="let ligneBus of listeLigneReg" (click)="goToligneInfo(ligneBus)" style={{styleBus(ligneBus)}}>
+        {{ligneGetNameBus(ligneBus)}}
       </ion-button>
     </div>
   </div>
@@ -85,7 +96,8 @@
   <div class="sectionLigne">
     <p>M'Convoit-Lignes /!\ horraires non gérée par l'api</p>
     <div>
-      <ion-button *ngFor="let ligneBus of listeLigneMco" (click)="goToligneInfo(ligneBus)" style={{styleBus(ligneBus)}}>{{ligneGetNameBus(ligneBus)}}
+      <ion-button *ngFor="let ligneBus of listeLigneMco" (click)="goToligneInfo(ligneBus)" style={{styleBus(ligneBus)}}>
+        {{ligneGetNameBus(ligneBus)}}
       </ion-button>
     </div>
   </div>

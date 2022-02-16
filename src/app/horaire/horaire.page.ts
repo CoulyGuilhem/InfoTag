@@ -88,9 +88,9 @@ export class HorairePage implements OnInit {
           console.log(new Date(date.getTime()+this.arret[j].trips[i]*1000))
           console.log("WOLA TU DIS PAS NaN : "+date.getTime()+this.arret[j].trips[i]*1000+" date.getTime() = "+date.getTime()+"this.arret[j].trips[i] = "+this.arret[j].trips[i])
         */
-          horaires = horaires + "|" + formatDate(passage,'HH:mm','en-US')
+          horaires = horaires + " | " + formatDate(passage,'HH:mm','en-US')
         } else {
-          horaires = horaires + "|" + 'Non deservis';
+          horaires = horaires + " | " + 'Non deservi';
         }
 
       }

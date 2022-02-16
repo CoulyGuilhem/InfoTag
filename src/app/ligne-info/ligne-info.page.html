@@ -1,19 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>ligneInfo</ion-title>
+  <ion-toolbar class="menuHaut">
+    <div class="content">
+      <img src="/assets/img/logo.png" alt="">
+      <ion-title>Lignes du réseau TAG</ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div>
-    <ion-button (click)="returnListeLigne()"> Retour </ion-button>
-    <ion-button (click)="goToHorraire()"> Horaires </ion-button>
+
+  <div class="btnRetour">
+    <ion-button color="tertiary" (click)="returnListeLigne()"> Retour </ion-button>
   </div>
-  <div>
-    <p>{{debugInfo()}}</p>
-    <ion-input type="text" value="" placeholder="Rechercher un arret" [(ngModel)]="searchBar"></ion-input>
+
+  <div class="infoLigne">
+
+    <div class="infoHaut">
+      <p>{{debugInfo()}}</p>
+      <ion-button color="tertiary" (click)="goToHorraire()"> Horaires </ion-button>
+      <ion-input type="text" value="" placeholder="Rechercher un arrêt" [(ngModel)]="searchBar"></ion-input>
+    </div>
+
+    <div class="tableauArret">
+      <div class="entreeArret" *ngFor="let arret of arretLigne">
+        <p *ngIf="arret['stopName'].includes(searchBar)">{{arret.stopName}}</p>
+      </div>
+    </div>
+
   </div>
-  <div *ngFor="let arret of arretLigne">
-    <p *ngIf="arret['stopName'].includes(searchBar)">{{arret.stopName}}</p>
-  </div>
+
 </ion-content>

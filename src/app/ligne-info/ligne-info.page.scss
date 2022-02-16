@@ -1,0 +1,49 @@
+.btnRetour {
+  margin: 5px 20px 0;
+
+  ion-button {
+    text-transform: capitalize;
+  }
+}
+
+.infoLigne {
+  margin: 20px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  border: 2px solid #e84418;
+
+  .infoHaut {
+    p {
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    ion-button {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      font-size: 1.1rem;
+      text-transform: capitalize;
+    }
+
+    ion-input {
+      --background: #121212 !important;
+      margin-bottom: 5px;
+      margin: 0 auto 10px;
+    }
+  }
+
+  .tableauArret {
+    margin-top: 30px;
+
+    .entreeArret {
+      border-bottom: 1px solid #e84418;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
