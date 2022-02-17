@@ -10,6 +10,15 @@ import {ConnexionAPITAGService} from "../connexion-apitag.service";
 })
 export class CartePage implements OnInit {
 
+  private me = Leaflet.icon({
+    iconUrl: '../../assets/img/me.png',
+    className: "me",
+    iconSize:[30,30],
+    iconAnchor: [0,30],
+    labelAnchor: [0, 30],
+    popupAnchor: [15, -30],
+  })
+
   private iconVerte = Leaflet.icon({
     iconUrl: '../../assets/img/pointerVert.png',
     className: "vert",
@@ -27,7 +36,7 @@ export class CartePage implements OnInit {
     labelAnchor: [0, 30],
     popupAnchor: [10, -30],
   })
-
+  private myCoords
   private longitude;
   private latitude;
   private map: Leaflet.Map;
@@ -99,7 +108,7 @@ export class CartePage implements OnInit {
       }
     });
 
-    this.locationInterval = setInterval(() => this.getLocation(),30000)
+    this.locationInterval = setInterval(() => this.getLocation(),10000)
   }
 
     ionViewDidLeave(){
@@ -118,6 +127,9 @@ export class CartePage implements OnInit {
               this.latitude = data.coords.latitude;
               this.longitude = data.coords.longitude;
               this.gpsService.setCoords(this.longitude,this.latitude);
+            this.map.removeLayer(this.myCoords)
+            this.myCoords = Leaflet.marker([this.latitude,this.longitude],{icon: this.me})
+            this.myCoords.addTo(this.map)
           }
       });
   }
@@ -125,7 +137,8 @@ export class CartePage implements OnInit {
   leafletMap() {
     console.log("test")
     this.map = Leaflet.map('mapId').setView([this.latitude,this.longitude], 14);
-    Leaflet.marker([this.latitude,this.longitude]).addTo(this.map);
+    this.myCoords = Leaflet.marker([this.latitude,this.longitude],{icon: this.me})
+    this.myCoords.addTo(this.map)
     Leaflet.tileLayer('https://data.mobilites-m.fr/carte-dark/{z}/{x}/{y}.png', {
       attribution: 'edupala.com © Angular LeafLet',
     }).addTo(this.map);
@@ -146,6 +159,9 @@ export class CartePage implements OnInit {
   }
 
   recentrer(){
+    this.map.removeLayer(this.myCoords)
+    this.myCoords = Leaflet.marker([this.latitude,this.longitude],{icon: this.me})
+    this.myCoords.addTo(this.map)
     this.map.flyTo([this.latitude,this.longitude],14)
   }
 
