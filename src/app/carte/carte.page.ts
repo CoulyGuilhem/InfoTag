@@ -14,18 +14,18 @@ export class CartePage implements OnInit {
     iconUrl: '../../assets/img/pointerVert.png',
     className: "vert",
     iconSize:[20,30],
-    iconAnchor: [0, 24],
-    labelAnchor: [-6, 0],
-    popupAnchor: [0, -36],
+    iconAnchor: [0,30],
+    labelAnchor: [0, 30],
+    popupAnchor: [10, -30],
   })
 
   private iconViolet = Leaflet.icon({
     iconUrl: '../../assets/img/pointerViolet.png',
     className: "violet",
     iconSize:[20,30],
-    iconAnchor: [0, 24],
-    labelAnchor: [-6, 0],
-    popupAnchor: [0, -36],
+    iconAnchor: [0, 30],
+    labelAnchor: [0, 30],
+    popupAnchor: [10, -30],
   })
 
   private longitude;
