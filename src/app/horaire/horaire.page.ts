@@ -65,7 +65,7 @@ export class HorairePage implements OnInit {
         if(this.arretLigne.length === 0){
           let addArret: Arret = {
             stopId: null,
-            stopName: null,
+            stopName: 'Aucune information disponible',
             trips: null,
             lat: null,
             lon: null

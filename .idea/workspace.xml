@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8afb3380-11d4-4201-bf5e-38a8d34d2cbf" name="Changes" comment="Marker popup centrés et bien positionés">
+    <list default="true" id="8afb3380-11d4-4201-bf5e-38a8d34d2cbf" name="Changes" comment="Fix horaire.page.ts -&gt; new concatenation message affichage + message pas d'info disponible">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/carte/carte.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/carte/carte.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/horaire/horaire.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/horaire/horaire.page.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +78,7 @@
       <workItem from="1644935113830" duration="28135000" />
       <workItem from="1644998434361" duration="14861000" />
       <workItem from="1645019246783" duration="1974000" />
-      <workItem from="1645121432711" duration="3244000" />
+      <workItem from="1645121432711" duration="3930000" />
     </task>
     <task id="LOCAL-00001" summary="Marker popup centrés et bien positionés">
       <created>1645122229763</created>
@@ -88,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645122229763</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix horaire.page.ts -&gt; new concatenation message affichage + message pas d'info disponible">
+      <created>1645125209715</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1645125209715</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +116,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Marker popup centrés" />
     <MESSAGE value="Marker popup centrés et bien positionés" />
-    <option name="LAST_COMMIT_MESSAGE" value="Marker popup centrés et bien positionés" />
+    <MESSAGE value="Fix horaire.page.ts -&gt; new concatenation message affichage + message pas d'info disponible" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix horaire.page.ts -&gt; new concatenation message affichage + message pas d'info disponible" />
   </component>
 </project>
