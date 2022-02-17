@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>signalement</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="../../assets/img/tram.jpg" />
+    <ion-card-header>
+      <ion-card-title>Si vous êtes témoin d'un incident ou d'une incivilité</ion-card-title>
+    </ion-card-header>
+
+  </ion-card>
+  <ion-label>Entrez la ligne sur laquelle se déroule l'incident :</ion-label>
+  <ion-input [(ngModel)]="ligne" type="te
+  xt"></ion-input>
+  <ion-label>Veuillez décrire l'incident :</ion-label>
+  <ion-textarea [(ngModel)]="incident"></ion-textarea>
+  <ion-button (click)="soumettre()">Soumettre</ion-button>
+
+</ion-content>

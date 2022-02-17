@@ -1,9 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8afb3380-11d4-4201-bf5e-38a8d34d2cbf" name="Changes" comment="Fix horaire.page.ts -&gt; new concatenation message affichage + message pas d'info disponible">
+    <list default="true" id="8afb3380-11d4-4201-bf5e-38a8d34d2cbf" name="Changes" comment="test">
+      <change afterPath="$PROJECT_DIR$/src/app/creation-compte-user/creation-compte-user-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/creation-compte-user/creation-compte-user.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/creation-compte-user/creation-compte-user.page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/creation-compte-user/creation-compte-user.page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/creation-compte-user/creation-compte-user.page.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/creation-compte-user/creation-compte-user.page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/locale-database.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/locale-database.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/signalement/home.page.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/signalement/home.page.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/signalement/signalement-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/signalement/signalement.page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/signalement/signalement.page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/signalement/signalement.page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/theme-service.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/theme-service.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/user-page/user-page-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/user-page/user-page.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/user-page/user-page.page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/user-page/user-page.page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/user-page/user-page.page.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/user-page/user-page.page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/tram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_02_2022_20_24__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_02_2022_20_24__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/horaire/horaire.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/horaire/horaire.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/compte-user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/compte-user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/compte/compte.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/compte/compte.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/compte/compte.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/compte/compte.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/connexion-apitag.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/connexion-apitag.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/signalement/signalement.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.page.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.page.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.page.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/signalement/signalement.page.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.page.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/itineraire/itineraire.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/itineraire/itineraire.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lignes/lignes-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lignes/lignes-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lignes/lignes.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lignes/lignes.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lignes/lignes.page.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lignes/lignes.page.spec.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +53,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/app/compte/compte.module.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/app/carte/carte.page.ts" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="259MzT571V7xHF5x7Nbr98f4qUH" />
   <component name="ProjectViewState">

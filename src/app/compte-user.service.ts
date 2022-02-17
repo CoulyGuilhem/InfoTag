@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class CompteUserService {
 
   constructor() { }
+
+  //Une BDD locale avec le stockage de la connexion de la personne
+  //Au demarrage de l app, recuperer la donnee dans la BDD et on la stocke dans un boolean en variable globale
+
 }

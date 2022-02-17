@@ -110,6 +110,17 @@ export class ConnexionAPITAGService {
     const URL = this.URL + "findType/json?types=arret&query=" + nomArret;
     return this.http.get(URL);
   }
+
+  //Les horaires en fonction de la ligne et de l'arret en particulier
+
+
+
+
+  //horaire au poteau
+  public listeHorairesArret(idArret) {
+    const URL = this.URL + "routers/default/index/stops/{SEM,C38}:id/stoptimes/" + idArret;
+    return this.http.get(URL);
+  }
+
+
 }
-
-
