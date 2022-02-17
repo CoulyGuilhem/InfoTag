@@ -13,7 +13,7 @@ export class CartePage implements OnInit {
   private iconVerte = Leaflet.icon({
     iconUrl: '../../assets/img/pointerVert.png',
     className: "vert",
-    iconSize:[32,48],
+    iconSize:[20,30],
     iconAnchor: [0, 24],
     labelAnchor: [-6, 0],
     popupAnchor: [0, -36],
@@ -22,7 +22,7 @@ export class CartePage implements OnInit {
   private iconViolet = Leaflet.icon({
     iconUrl: '../../assets/img/pointerViolet.png',
     className: "violet",
-    iconSize:[32,48],
+    iconSize:[20,30],
     iconAnchor: [0, 24],
     labelAnchor: [-6, 0],
     popupAnchor: [0, -36],
@@ -135,13 +135,11 @@ export class CartePage implements OnInit {
       console.log(trace)
       for(let j = 0; j < trace['features'].length;j++){
         let coordRanges = []
-        console.log(j)
-        if(!trace['features'][j]['geometry'][0] !== undefined){ // Ne fonctionne pas pour x raisons
+        if('coordinates' in trace['features'][j]['geometry']){ // Ne fonctionne pas pour x raisons
           for(let i = 0 ; i < trace['features'][j]['geometry']['coordinates'][0].length; i++){
-
             coordRanges.push([trace['features'][j]['geometry']['coordinates'][0][i][1],trace['features'][j]['geometry']['coordinates'][0][i][0]])
           }
-          Leaflet.polyline(coordRanges, {color: this.parseColor(trace['features'][j]['properties']['COULEUR'])}).addTo(this.map);
+          Leaflet.polyline(coordRanges, {color: this.parseColor(trace['features'][j]['properties']['COULEUR'])}).addTo(this.map).bindPopup(trace['features'][j]['properties']['NUMERO']);
         }
       }
     })
@@ -153,6 +151,9 @@ export class CartePage implements OnInit {
     for(let i = 0; i < colorSplit.length; i++){
       colorInt.push(Number(colorSplit[i]))
       color = color + colorInt[i].toString(16);
+      if(colorInt[i] === 0){
+        color = color + '0'
+      }
     }
     return color
   }

@@ -69,7 +69,9 @@ export class LignesPage implements OnInit {
               type: data[i]['type'],
               colortext:data[i]['textColor']
             }
-            console.log(ligne.id);
+
+            //console.log(ligne.id);
+
             this.listeLigneTypeBus.push(data[i]['type'])
             this.busType(ligne);
           }
