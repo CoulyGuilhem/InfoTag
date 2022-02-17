@@ -45,14 +45,31 @@ export class HorairePage implements OnInit {
         console.log(this.arret)
         this.arretLigne = [];
         for (let i = 0; i < this.arret.length; i++) {
+          let trips
+          console.log(this.arret[i])
+          if(this.arret[i]['trips'].length !== 0){
+            trips = this.arret[i]['trips']
+          } else {
+            trips = null
+          }
+
           let addArret: Arret = {
             stopId: this.arret[i]['stopId'],
             stopName: this.arret[i]['stopName'],
-            trips: this.arret[i]['trips'],
+            trips: trips,
             lat: this.arret[i]['lat'],
             lon: this.arret[i]['lon']
           }
-          console.log(addArret.trips[0]+":"+addArret.trips[1]+":"+addArret.trips[2]+":"+addArret.trips[3])
+          this.arretLigne.push(addArret)
+        }
+        if(this.arretLigne.length === 0){
+          let addArret: Arret = {
+            stopId: null,
+            stopName: null,
+            trips: null,
+            lat: null,
+            lon: null
+          }
           this.arretLigne.push(addArret)
         }
       });
@@ -79,18 +96,19 @@ export class HorairePage implements OnInit {
       let horaires: string = "";
       let date = new Date();
       date.setHours(0,0,0,0);
-
-      for(let i = 0;i < (arret.trips).length; i ++){
-        let passage = new Date(date.getTime()+arret.trips[i]*1000)
-        if(passage instanceof Date && !isNaN(passage.getTime())){
-          horaires = horaires + " | " + formatDate(passage,'HH:mm','en')
-        } else {
-          horaires = horaires + " | " + 'Non deservi';
+      if(arret.trips === null){
+        horaires = 'Aucune information disponible  '
+      } else {
+        for(let i = 0;i < (arret.trips).length - 1; i ++){
+          let passage = new Date(date.getTime()+arret.trips[i]*1000)
+          if(passage instanceof Date && !isNaN(passage.getTime())){
+            horaires = horaires + formatDate(passage,'HH:mm','en') + " | "
+          } else {
+            horaires = horaires + ' - ' + " | ";
+          }
         }
-
       }
-      console.log(horaires)
-      return horaires
+      return horaires.substring(0, horaires.length-2)
     } else {
       return null
     }

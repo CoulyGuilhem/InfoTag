@@ -135,7 +135,7 @@ export class CartePage implements OnInit {
       console.log(trace)
       for(let j = 0; j < trace['features'].length;j++){
         let coordRanges = []
-        if('coordinates' in trace['features'][j]['geometry']){ // Ne fonctionne pas pour x raisons
+        if('coordinates' in trace['features'][j]['geometry']){
           for(let i = 0 ; i < trace['features'][j]['geometry']['coordinates'][0].length; i++){
             coordRanges.push([trace['features'][j]['geometry']['coordinates'][0][i][1],trace['features'][j]['geometry']['coordinates'][0][i][0]])
           }
