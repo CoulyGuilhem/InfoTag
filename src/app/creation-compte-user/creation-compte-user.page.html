@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>creationCompteUser</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>email</ion-label>
+    <ion-input [(ngModel)]="email" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>mot de passe</ion-label>
+    <ion-input [(ngModel)]="password" type="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Saisissez à nouveau votre mot de passe</ion-label>
+    <ion-input [(ngModel)]="passwordVerif" type="password"></ion-input>
+  </ion-item>
+  <section>
+    <ion-button (click)="validationUser()" expand="block">Valider</ion-button>
+  </section>
+
+</ion-content>
