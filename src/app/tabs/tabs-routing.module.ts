@@ -24,6 +24,18 @@ const routes: Routes = [
         loadChildren: () => import('../compte/compte.module').then(m => m.ComptePageModule)
       },
       {
+        path: 'creation',
+        loadChildren: () => import('../creation-compte-user/creation-compte-user.module').then(m => m.CreationCompteUserPageModule)
+      },
+      {
+        path: 'user',
+        loadChildren: () => import('../user-page/user-page.module').then(m => m.UserPagePageModule)
+      },
+      {
+        path: 'signalement',
+        loadChildren: () => import('../signalement/signalement.module').then(m => m.SignalementPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/carte',
         pathMatch: 'full'

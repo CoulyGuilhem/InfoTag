@@ -99,7 +99,7 @@ export class CartePage implements OnInit {
       }
     });
 
-    this.locationInterval = setInterval(() => this.getLocation(),1000)
+    this.locationInterval = setInterval(() => this.getLocation(),30000)
   }
 
     ionViewDidLeave(){
