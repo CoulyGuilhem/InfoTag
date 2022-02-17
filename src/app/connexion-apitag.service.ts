@@ -118,7 +118,7 @@ export class ConnexionAPITAGService {
 
   //horaire au poteau
   public listeHorairesArret(idArret) {
-    const URL = this.URL + "routers/default/index/stops/{SEM,C38}:id/stoptimes/" + idArret;
+    const URL = this.URL + "routers/default/index/stops/"+idArret+"/stoptimes/";
     return this.http.get(URL);
   }
 

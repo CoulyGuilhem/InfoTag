@@ -22,8 +22,13 @@
     </div>
 
     <div class="tableauArret">
-      <div class="entreeArret" *ngFor="let arret of arretLigne">
-        <p *ngIf="arret['stopName'].includes(searchBar)">{{arret.stopName}}</p>
+      <div class="entreeArret" *ngFor="let arret of arretLigne" (click)="showTheoricPassage(arret)">
+        <div *ngIf="arret['stopName'].includes(searchBar)">
+          <p>{{arret.stopName}}</p>
+          <p *ngIf="arret == numeroArret">{{passageTexte1}}</p>
+          <p *ngIf="arret == numeroArret">{{passageTexte2}}</p>
+        </div>
+
       </div>
     </div>
 

@@ -3,6 +3,7 @@ import { AlertController } from '@ionic/angular';
 import { Router } from "@angular/router";
 import { LocaleDatabaseService } from '../locale-database.service';
 import { GpsService } from '../gps.service';
+import { Geolocation } from '@awesome-cordova-plugins/geolocation/ngx';
 
 @Component({
   selector: 'app-signalement',
@@ -16,26 +17,43 @@ export class SignalementPage implements OnInit {
   private lat;
   private lon;
 
-  constructor(public alertController: AlertController, private router: Router, private BDD: LocaleDatabaseService, private GPS: GpsService) {
+  constructor(public alertController: AlertController, private router: Router, private BDD: LocaleDatabaseService, private gpsService: GpsService, private gps: Geolocation) {
   }
-
 
 
   ngOnInit() {
+    this.gps.getCurrentPosition().then((resp) => {
+      this.lat = resp.coords.latitude;
+      this.lon = resp.coords.longitude;
+      this.gpsService.setCoords(this.lon, this.lat);
+    }).catch((error) => {
+      console.log('Error getting location', error);
+    });
   }
 
   public soumettre() {
-    //var tabGPS = this.GPS.getCoords();
-    //this.lat = tabGPS[0];
-    //this.lon = tabGPS[1];
+
+    var tabGPS = this.gpsService.getCoords();
+    this.lat = tabGPS[0];
+    this.lon = tabGPS[1];
     var pointeur = this;
     this.BDD.get('mail').then((val) => {
       if (val) {
         this.mailEmetteur = val;
         if (this.mailEmetteur !== "") {
-          const temps = Date.now()
+          let date1 = new Date();
+
+          let dateLocale = date1.toLocaleString('fr-FR', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric'
+          });
           //On passe le mail, le gps, le timestamp, la ligne et l incident
-          const queryString = "fonctionnalite=signalement&mail=" + this.mailEmetteur + "&lat=" + this.lat + "&lon=" + this.lon + "&ligne=" + this.ligne + "&time=" + temps + "&incident=" + this.incident;
+          const queryString = "fonctionnalite=signalement&mail=" + this.mailEmetteur + "&lat=" + this.lat + "&lon=" + this.lon + "&ligne=" + this.ligne + "&time=" + dateLocale + "&incident=" + this.incident;
 
           var requete = new XMLHttpRequest();
           requete.onreadystatechange = function () {

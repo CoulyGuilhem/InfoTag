@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8afb3380-11d4-4201-bf5e-38a8d34d2cbf" name="Changes" comment="map recenter bouton">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/me.png" afterDir="false" />
+    <list default="true" id="8afb3380-11d4-4201-bf5e-38a8d34d2cbf" name="Changes" comment="gps icon moving recentring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/carte/carte.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/carte/carte.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/connexion-apitag.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/connexion-apitag.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/ligne-info/ligne-info.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ligne-info/ligne-info.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/ligne-info/ligne-info.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ligne-info/ligne-info.page.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645133233780</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="gps icon moving recentring">
+      <created>1645135064467</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1645135064467</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +158,7 @@
     <MESSAGE value="Merge micka" />
     <MESSAGE value="fix merge" />
     <MESSAGE value="map recenter bouton" />
-    <option name="LAST_COMMIT_MESSAGE" value="map recenter bouton" />
+    <MESSAGE value="gps icon moving recentring" />
+    <option name="LAST_COMMIT_MESSAGE" value="gps icon moving recentring" />
   </component>
 </project>
