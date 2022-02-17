@@ -144,6 +144,11 @@ export class CartePage implements OnInit {
       }
     })
   }
+
+  recentrer(){
+    this.map.flyTo([this.latitude,this.longitude],14)
+  }
+
   parseColor(colorString){
     let colorInt =[]
     let colorSplit = colorString.split(",")

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8afb3380-11d4-4201-bf5e-38a8d34d2cbf" name="Changes" comment="Merge micka">
+    <list default="true" id="8afb3380-11d4-4201-bf5e-38a8d34d2cbf" name="Changes" comment="fix merge">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/carte/carte.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/carte/carte.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/carte/carte.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/carte/carte.page.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645128873255</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix merge">
+      <created>1645130217964</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1645130217964</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +138,7 @@
     <MESSAGE value="Marker popup centrés et bien positionés" />
     <MESSAGE value="Fix horaire.page.ts -&gt; new concatenation message affichage + message pas d'info disponible" />
     <MESSAGE value="Merge micka" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge micka" />
+    <MESSAGE value="fix merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix merge" />
   </component>
 </project>
