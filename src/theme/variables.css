@@ -2,6 +2,14 @@
   font-family: "Poppins";
 }
 
+body {
+  color: #fff;
+}
+
+ion-app.lighted {
+  color: #000;
+}
+
 .menuHaut .content {
   display: -webkit-box;
   display: -ms-flexbox;
