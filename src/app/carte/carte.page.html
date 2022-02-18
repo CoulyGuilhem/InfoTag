@@ -3,7 +3,6 @@
     <div class="content">
       <img src="/assets/img/logo.png" alt="">
       <ion-title>Carte du réseau TAG</ion-title>
-      <ion-button (click)="recentrer()"> Recentrer sur moi</ion-button>
     </div>
   </ion-toolbar>
 </ion-header>
@@ -12,4 +11,5 @@
   <p class="gps">Latitude {{latitude}} | Longitude {{longitude}}</p>
   <div id="mapId" style="width: 100%; height:100%">
   </div>
+  <ion-button class="btnCentre" (click)="recentrer()"> Recentrer</ion-button>
 </ion-content>

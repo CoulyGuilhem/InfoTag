@@ -1,0 +1,39 @@
+.blocInscription {
+  margin: 20px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  border: 2px solid #642180;
+}
+
+.blocInscription .titreInscription {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 15px 30px;
+}
+
+.blocInscription .champInscription {
+  text-align: center;
+  margin: 15px 0 30px;
+}
+
+.blocInscription .champInscription ion-input {
+  --background: #121212 !important;
+  border-radius: 6px;
+  text-align: left;
+  margin: 10px auto 0;
+  width: 90%;
+}
+
+.blocInscription .btnValiderInscription {
+  text-align: center;
+  margin: 0 auto 10px;
+}
+
+.blocInscription .btnValiderInscription ion-button {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  height: 40px;
+}
+/*# sourceMappingURL=creation-compte-user.page.css.map */

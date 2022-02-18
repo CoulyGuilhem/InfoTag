@@ -1,22 +1,37 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>signalement</ion-title>
+  <ion-toolbar class="menuHaut">
+    <div class="content">
+      <img src="/assets/img/logo.png" alt="">
+      <ion-title>Signalement</ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <img src="../../assets/img/tram.jpg" />
-    <ion-card-header>
-      <ion-card-title>Si vous êtes témoin d'un incident ou d'une incivilité</ion-card-title>
-    </ion-card-header>
 
-  </ion-card>
-  <ion-label>Entrez la ligne sur laquelle se déroule l'incident :</ion-label>
-  <ion-input [(ngModel)]="ligne" type="te
-  xt"></ion-input>
-  <ion-label>Veuillez décrire l'incident :</ion-label>
-  <ion-textarea [(ngModel)]="incident"></ion-textarea>
-  <ion-button (click)="soumettre()">Soumettre</ion-button>
+  <div class="blocSignalement">
+
+    <ion-card>
+      <img src="../../assets/img/tram.jpg" />
+      <ion-card-header>
+        <ion-card-title class="txtSignalement">Si vous êtes témoin d'un incident ou d'une incivilité :</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <div class="champLigne">
+      <ion-label>Entrez la ligne sur laquelle se déroule l'incident :</ion-label>
+      <ion-input [(ngModel)]="ligne" type="text"></ion-input>
+    </div>
+
+    <div class="champIncident">
+      <ion-label>Veuillez décrire l'incident :</ion-label>
+      <ion-textarea [(ngModel)]="incident"></ion-textarea>
+    </div>
+
+    <div class="btnSoumettre">
+      <ion-button color="success" (click)="soumettre()">Soumettre</ion-button>
+    </div>
+
+  </div>
 
 </ion-content>

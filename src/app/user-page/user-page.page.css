@@ -1,0 +1,53 @@
+.blocConnecte {
+  margin: 20px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  border: 2px solid #642180;
+}
+
+.blocConnecte .titreConnecte {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 40px 10px 50px;
+}
+
+.blocConnecte .switch {
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blocConnecte .switch ion-label {
+  font-family: "Poppins";
+  font-size: 1.1rem;
+}
+
+.blocConnecte .btnSignalement {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.blocConnecte .btnSignalement ion-button {
+  height: 50px;
+  font-size: 1.5rem;
+}
+
+.blocConnecte .btnDeconnexion {
+  margin: 20px;
+  text-align: center;
+}
+
+.blocConnecte .btnDeconnexion ion-button {
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=user-page.page.css.map */

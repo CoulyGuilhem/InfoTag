@@ -1,22 +1,36 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>userPage</ion-title>
+  <ion-toolbar class="menuHaut">
+    <div class="content">
+      <img src="/assets/img/logo.png" alt="">
+      <ion-title>Compte</ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item>
-    <ion-label>{{texte}}</ion-label>
-    <ion-toggle [(ngModel)]="mode" (click)="switch()" slot="start" name="theme" color="secondary" checked></ion-toggle>
-  </ion-item>
 
+  <div class="blocConnecte">
 
-  <ion-item>
-    <ion-button routerLink="/tabs/signalement">Signalement</ion-button>
-  </ion-item>
+    <div class="titreConnecte">
+      <p>Vous êtes désormais connecté !</p>
+    </div>
 
-  <ion-item>
-    <ion-button (click)="deconnexion()">Deconnexion</ion-button>
-  </ion-item>
+    <ion-item>
+      <div class="switch">
+        <ion-label>{{texte}}</ion-label>
+        <ion-toggle [(ngModel)]="mode" (click)="switch()" slot="start" name="theme" color="success" checked>
+        </ion-toggle>
+      </div>
+    </ion-item>
+
+    <section class="btnSignalement">
+      <ion-button color="tertiary" routerLink="/tabs/signalement">Signalement</ion-button>
+    </section>
+
+    <section class="btnDeconnexion">
+      <ion-button color="success" (click)="deconnexion()">Déconnexion</ion-button>
+    </section>
+
+  </div>
 
 </ion-content>

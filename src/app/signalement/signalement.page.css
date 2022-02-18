@@ -1,0 +1,45 @@
+.blocSignalement {
+  margin: 20px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  border: 2px solid #642180;
+}
+
+.blocSignalement .txtSignalement {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.blocSignalement .champLigne,
+.blocSignalement .champIncident {
+  text-align: center;
+  margin: 15px auto 30px;
+  width: 90%;
+}
+
+.blocSignalement .champLigne ion-input,
+.blocSignalement .champLigne ion-textarea,
+.blocSignalement .champIncident ion-input,
+.blocSignalement .champIncident ion-textarea {
+  --background: #121212 !important;
+  border-radius: 6px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.blocSignalement .champIncident ion-textarea {
+  height: 130px;
+}
+
+.blocSignalement .btnSoumettre {
+  text-align: center;
+  margin: 0 auto 10px;
+}
+
+.blocSignalement .btnSoumettre ion-button {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  height: 40px;
+}
+/*# sourceMappingURL=signalement.page.css.map */

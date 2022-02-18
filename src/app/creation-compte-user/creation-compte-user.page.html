@@ -1,24 +1,39 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>creationCompteUser</ion-title>
+  <ion-toolbar class="menuHaut">
+    <div class="content">
+      <img src="/assets/img/logo.png" alt="">
+      <ion-title>Création de compte</ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item>
-    <ion-label>email</ion-label>
-    <ion-input [(ngModel)]="email" type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>mot de passe</ion-label>
-    <ion-input [(ngModel)]="password" type="password"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Saisissez à nouveau votre mot de passe</ion-label>
-    <ion-input [(ngModel)]="passwordVerif" type="password"></ion-input>
-  </ion-item>
-  <section>
-    <ion-button (click)="validationUser()" expand="block">Valider</ion-button>
-  </section>
+
+  <div class="blocInscription">
+
+    <div class="titreInscription">
+      <p>Complétez les champs pour créer votre compte utilisateur</p>
+    </div>
+
+    <div class="champInscription">
+      <ion-label>Rentrez votre adresse mail :</ion-label>
+      <ion-input [(ngModel)]="email" type="text"></ion-input>
+    </div>
+
+    <div class="champInscription">
+      <ion-label>Choisissez un mot de passe :</ion-label>
+      <ion-input [(ngModel)]="password" type="password"></ion-input>
+    </div>
+
+    <div class="champInscription">
+      <ion-label>Saisissez à nouveau votre mot de passe :</ion-label>
+      <ion-input [(ngModel)]="passwordVerif" type="password"></ion-input>
+    </div>
+
+    <div class="btnValiderInscription">
+      <ion-button color="success" (click)="validationUser()">Valider</ion-button>
+    </div>
+
+  </div>
 
 </ion-content>

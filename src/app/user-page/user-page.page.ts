@@ -35,7 +35,7 @@ export class UserPagePage implements OnInit {
             }
             else {
               this.mode = true;
-              this.texte = "Theme foncé";
+              this.texte = "Thème foncé";
               this.activeModeSombre();
             }
           }
@@ -46,7 +46,7 @@ export class UserPagePage implements OnInit {
 
   public switch() {
     if (this.mode) {
-      this.texte = "Theme clair";
+      this.texte = "Thème clair";
       this.BDD.set("theme", "light");
       this.activeModeClair();
     }

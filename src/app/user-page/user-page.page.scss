@@ -1,0 +1,45 @@
+.blocConnecte {
+  margin: 20px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  border: 2px solid #642180;
+
+  .titreConnecte {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 40px 10px 50px;
+  }
+
+  .switch {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    ion-label {
+      font-family: "Poppins";
+      font-size: 1.1rem;
+    }
+  }
+
+  .btnSignalement {
+    margin: 40px 0;
+    text-align: center;
+
+    ion-button {
+      height: 50px;
+      font-size: 1.5rem;
+    }
+  }
+
+  .btnDeconnexion {
+    margin: 20px;
+    text-align: center;
+
+    ion-button {
+      text-transform: capitalize;
+    }
+  }
+}
