@@ -65,6 +65,7 @@ export class CartePage implements OnInit {
 
   ionViewDidEnter(){
 
+    this.map = null;
 
     window.dispatchEvent(new Event('resize'));
     this.gps.getCurrentPosition().then((resp) => {

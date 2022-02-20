@@ -30,6 +30,8 @@ export class ComptePage {
   }
 
   public connexion() {
+    console.log(this.password);
+    console.log(this.email);
     var pointeur = this;
     //1. on verifie que les champs sont remplis
     if (this.email === undefined || this.password === undefined) {

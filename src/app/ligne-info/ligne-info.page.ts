@@ -33,22 +33,22 @@ export class LigneInfoPage implements OnInit {
 
       if(data['length'] !== 0) {
         for (let j = 0; j < data[0]['times'].length; j++) {
-          this.horaire1.push(data[0]['times'][j]['scheduledArrival'])
-          console.log(data[0]['times'][j])
+          this.horaire1.push(data[0]['times'][j]['realtimeArrival'])
+        
         }
         this.passageTexte1 = data[0]['times'][0]['headsign']+' : '+this.horaireCalculed(this.horaire1)
       }
     })
     for(let i = 0; i < this.arret2.length; i++){
-      console.log(this.arret2[i]['stopName'] == arret.stopName)
+    
       if(arret.stopName == this.arret2[i]['stopName']){
         this.numeroArret = arret
         this.apiConnexion.listeHorairesArret(this.arret2[i].stopId).subscribe(data2 => {
-          console.log(data2)
+          console.log('test')
           if(data2['length'] !== 0){
             for(let j = 0; j < data2[0]['times'].length; j++){
-              this.horaire2.push(data2[0]['times'][j]['scheduledArrival'])
-              console.log(data2[0]['times'][j])
+              this.horaire2.push(data2[0]['times'][j]['realtimeArrival'])
+              
             }
             this.passageTexte2 = data2[0]['times'][0]['headsign']+' : '+this.horaireCalculed(this.horaire2)
           }
@@ -66,10 +66,12 @@ export class LigneInfoPage implements OnInit {
       for(let i = 0;i < arret.length; i ++){
         let passage = new Date(date.getTime()+arret[i]*1000)
         if(passage instanceof Date && !isNaN(passage.getTime())){
-          if(Number(formatDate(passage,'mm','en')) > 58){
+          let time = (passage.getTime() - new Date().getTime()) / 60000
+          console.log(time)
+          if( time > 59){
             horaires = horaires + ' < 1h | '
           } else {
-            horaires = formatDate(passage,'mm','en') +" min | " + horaires
+            horaires =  horaires + " | " +(Number(formatDate(passage,'mm','en')) - Number(formatDate(new Date(),'mm','en'))) + " min"
           }
 
         } else {
@@ -88,7 +90,7 @@ export class LigneInfoPage implements OnInit {
     this.ligne = this.ligneService.getLigne()
     if(this.ligne != null){
       this.apiConnexion.listeArretEnFonctionligneAvecHeureAffichage(this.ligne,null).subscribe(dataProximite => {
-        console.log(dataProximite)
+        
         this.arret = dataProximite[0]['arrets'];
         this.arret2 = dataProximite[1]['arrets'];
         for(let i = 0;i<this.arret.length;i++){
@@ -108,7 +110,7 @@ export class LigneInfoPage implements OnInit {
           }
           this.arretLigne.push(addArret)
         }
-        //console.log(this.arretLigne[1].trips.toString());
+        
       });
     } else {
       console.log("Ligne == null")
